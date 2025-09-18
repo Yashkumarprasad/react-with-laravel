@@ -48,7 +48,7 @@ export default function UsersIndex({ auth, users, flash }) {
                                 <td className="p-2">
                                     <Link
                                         href={route('admin.users.edit', u.id)}
-                                        className="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700 mr-2"
+                                        className="btn btn-primary mr-2"
                                     >
                                         <Edit className="w-4 h-4 mr-1" />
                                         Edit
@@ -67,10 +67,7 @@ export default function UsersIndex({ auth, users, flash }) {
                                                 .querySelector('meta[name="csrf-token"]')
                                                 .getAttribute('content')}
                                         />
-                                        <button
-                                            type="submit"
-                                            className="inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700"
-                                        >
+                                        <button type="submit" className="btn btn-danger">
                                             <Trash2 className="w-4 h-4 mr-1" />
                                             Delete
                                         </button>
